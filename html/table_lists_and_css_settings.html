@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dosya</title>
+    <style>
+        form {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <ol type="A">
+        <li>aaaaa</li>
+        <li>bbbbb</li>
+        <li>ccccc</li>
+        <li>ddddd</li>
+    </ol>
+    <ul style="list-style-type:upper-roman">
+        <!--unordered list-->
+        <li>asdasd</li>
+        <li>dsadass</li>
+        <li>fgfgfgg</li>
+        <li>şşasdlş</li>
+    </ul>
+    <table border="1" style="text-align: center; color: white; background-color: grey;border-style: solid; border-color: blanchedalmond;">
+        <th>HEAD1</th>
+        <th>HEAD2</th>
+        <th>HEAD3</th>
+        <th>HEAD4</th>
+        <tr>
+            <td rowspan="4" colspan="2">asdasd</td>
+
+            <td>asddda</td>
+            <td>knhlkn</td>
+        </tr>
+        <tr>
+
+            <td>sasddd</td>
+            <td>sasddd</td>
+        </tr>
+        <tr>
+
+            <td>wewewe</td>
+            <td>lklklk</td>
+        </tr>
+        <tr>
+
+            <td>wwwwww</td>
+            <td>wwwwww</td>
+        </tr>
+    </table>
+    <br><br>
+    <!--validate ile input alanındaki veriler doğrulanır-->
+    <form target="_blank" method="POST" autocomplete="on" validate>
+        <!--name in içindeki değerlerle formun içindeki 
+        verilere ulaşılır veya JavaScript ile
+        forma erişmek için kullanılır-->
+        <label for="nametap">Adınız&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" name="namefield" id="nametap" autofocus="on" placeholder="Ad gir" maxlength="15" /><br><br>
+        <label for="snametap">Soyadınız </label>
+        <input type="text" name="snameconn" id="snametap" placeholder="Soyad gir" maxlength="15" /><br><br>
+        <label for="texttap">Yazı Gir&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" name="txfield" id="texttap" multiple="1" placeholder="Text gir" maxlength="15" /><br><br>
+        <!--formenctype form verilerinin sunucuya gönderilirken nasıl kodlanacağını belirler-->
+        <input type="submit" formenctype="multipart/form-data" value="Gönder" />
+    </form>
+</body>
+
+</html>
