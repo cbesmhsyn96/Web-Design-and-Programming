@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code of HTML</title>
+    <!--style atiketi içinde css düzenlemeleri yapıyoruz-->
+    <style>
+        ol {
+            color: purple;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-style: initial;
+        }
+        
+        ul {
+            list-style-type: disc;
+            font-family: cursive;
+            font-style: oblique;
+        }
+        
+        li {
+            text-align: left;
+            margin-left: 47%;
+        }
+        
+        .tablo1 {
+            font-style: initial;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        th {
+            background-color: purple;
+            column-width: 10px;
+            color: white;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        
+        tr {
+            padding: 10px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: grey;
+        }
+        
+        .table2 {
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+            border: 2px solid black;
+        }
+        
+        .th2 {
+            background-color: black;
+            color: white;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .tr2:nth-child(odd) {
+            background-color: green;
+            color: white;
+            font-style: italic;
+            font-size: 20px;
+        }
+        
+        .tr2:nth-child(even) {
+            background-color: indigo;
+            color: white;
+            font-style: oblique;
+            font-size: 20px;
+        }
+        
+        .ozeltd {
+            background-color: darkmagenta;
+        }
+        
+        .formcenter {
+            text-align: center;
+        }
+        
+        .iframeclass {
+            margin-left: 35%;
+            margin-right: 65%;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        Bu çalışmada;
+        sıralı ve sırasız liste tanımlama ve iç içe tanımlama
+        table etiketi ile ilgili işlemler
+        form işlemleri
+        iframe etiketi
+        ile ilgili kodlar yazılacaktır.
+    -->
+    <ol type="I">
+        <li>asdasd</li>
+        <li>asasas</li>
+        <ul>
+            <li>dddddd</li>
+            <li>asdasd</li>
+            <li>errrrr</li>
+            <li>tttttt</li>
+        </ul>
+        <li>ksşdfa</li>
+        <li>ererer</li>
+    </ol>
+    <table border="1" class="tablo1">
+        <th>asdasdsadf</th>
+        <th>asddd</th>
+        <th>eressssr</th>
+        <tr>
+            <td>asddd</td>
+            <td>ddaa</td>
+            <td>ererre</td>
+        </tr>
+        <tr>
+            <td>asddd</td>
+            <td>ddaa</td>
+            <td>ererre</td>
+        </tr>
+        <tr>
+            <td>asddd</td>
+            <td>ddaa</td>
+            <td>ererre</td>
+        </tr>
+        <tr>
+            <td>asddd</td>
+            <td>ddaa</td>
+            <td>ererre</td>
+        </tr>
+        <tr>
+            <td>asddd</td>
+            <td>ddaa</td>
+            <td>ererre</td>
+        </tr>
+        <tr>
+            <td>asddd</td>
+            <td>ddaa</td>
+            <td>ererre</td>
+        </tr>
+        <tr>
+            <td>asddd</td>
+            <td>ddaa</td>
+            <td>ererre</td>
+        </tr>
+    </table><br>
+    <table class="table2">
+        <th class="th2">başlık1</th>
+        <th class="th2">başlık2</th>
+        <th class="th2">başlık3</th>
+        <th class="th2">başlık4</th>
+        <th class="th2">başlık5</th>
+        <tr class="tr2">
+            <td rowspan="6" colspan="2">aaaaaaaa</td>
+
+            <td colspan="2">aaaaaaaa</td>
+
+            <td>aaaaaaaa</td>
+        </tr>
+        <tr class="tr2">
+
+
+            <td>aaaaaaaa</td>
+            <td>aaaaaaaa</td>
+            <td>aaaaaaaa</td>
+        </tr>
+        <tr class="tr2">
+
+
+            <td>aaaaaaaa</td>
+            <td colspan="2" rowspan="2">aaaaaaaa</td>
+
+        </tr>
+        <tr class="tr2">
+
+            <td>aaaaaaaa</td>
+
+        </tr>
+        <tr class="tr2">
+
+            <td>aaaaaaaa</td>
+            <td rowspan="2" class="ozeltd">aaaaaaaa</td>
+            <td>aaaaaaaa</td>
+        </tr>
+        <tr class="tr2">
+
+            <td>aaaaaaaa</td>
+
+            <td>aaaaaaaa</td>
+        </tr>
+        <tr class="tr2">
+            <td>aaaaaaaa</td>
+            <td>aaaaaaaa</td>
+            <td colspan="2" rowspan="3">aaaaaaaa</td>
+
+            <td>aaaaaaaa</td>
+        </tr>
+        <tr class="tr2">
+            <td>aaaaaaaa</td>
+            <td>aaaaaaaa</td>
+
+            <td>aaaaaaaa</td>
+        </tr>
+        <tr class="tr2">
+            <td>aaaaaaaa</td>
+            <td>aaaaaaaa</td>
+            <td>aaaaaaaa</td>
+        </tr>
+    </table><br>
+    <iframe src="https://www.yazilimbilisim.net" title="htmlsayfasi" width="400px" height="300px" class="iframeclass"></iframe><br><br>
+    <form class="formcenter" action="try3.html" target="_blank" autocomplete="on" validate method="POST">
+        <label for="name">Adınız&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" autocomplete="off" maxlength="20" id="name" required placeholder="Adınızı girin..." /><br>
+        <!--Form verileri bir kez action kısmındaki yere gönderildikten sonra
+        önceki girilen verilerin hatırlandığı yerler autcomplete' in on olduğu yerlerdir.-->
+        <label for="sname">Soyadınız</label>
+        <input type="text" maxlength="20" id="sname" required placeholder="Soyadınızı girin..." /><br>
+        <label for="pass">Şifreniz&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="password" maxlength="20" id="pass" required placeholder="**************" /><br>
+        <label for="urller"></label>
+        <select name="sehirler" onchange="document.location.href=this.value" id="urller">
+            <option value="https://www.facebook.com/">Facebook</option>
+            <option value="https://www.google.com/">Google</option>
+            <option value="https://www.haberler.com/">Haberler</option>
+            <option value="https://sanalkurs.net/html-select-kullanimi-8303.html">Select kullanımı</option>
+        </select><br>
+        <!--Yukarındaki select tanımında dropdown' ın her bir seçeneğine 
+        tıklandığında belirtilen url e gider-->
+        <label for="sehirler">Şehirler</label>
+        <select name="sehirler" id="sehirler">
+            <option>İstanbul</option>
+            <option>Adana</option>
+            <option>Hatay</option>
+            <option>İzmir</option>
+        </select><br>
+        <input type="submit" value="Gönder" />
+    </form>
+</body>
+
+</html>
