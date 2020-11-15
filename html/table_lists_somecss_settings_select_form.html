@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayfa</title>
+    <style>
+        table {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .withspan {
+            background-color: green;
+        }
+        
+        th {
+            background-color: indigo;
+            font-size: 15px;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            color: white;
+        }
+        
+        tr:nth-child(odd) {
+            background-color: mediumblue;
+            color: white;
+            font-style: oblique;
+            font-size: medium;
+        }
+        
+        tr:nth-child(even) {
+            background-color: mediumblue;
+            color: aqua;
+            font-style: italic;
+            font-size: medium;
+        }
+        
+        iframe {
+            margin-left: 25%;
+            margin-right: 75%;
+        }
+        
+        form {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <th>Başlık1</th>
+        <th>Başlık2</th>
+        <th>Başlık3</th>
+        <th>Başlık4</th>
+        <tr>
+            <td colspan="3" rowspan="4" class="withspan">asdasd</td>
+            <td>asdasd</td>
+        </tr>
+        <tr>
+
+            <td>asdasd</td>
+        </tr>
+        <tr>
+
+            <td>asdasd</td>
+        </tr>
+        <tr>
+
+            <td>asdasd</td>
+        </tr>
+    </table>
+    <!--ID tek bir nesne için kullanılır ama class sayfada birden fazla yerde kulanılabilir.
+    ID değerini başka bir etikete daha veremeyiz.-->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d385395.5590093089!2d28.73198480192593!3d41.005500518888525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1605271429980!5m2!1str!2str"
+        width="650px" height="450px" frameborder="2" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <form autocomplete="on" method="POST" target="_blank" validate>
+        <label for="name">Adınız</label>
+        <input type="text" maxlength="20" placeholder="Adınızı girin..." size="30" id="name" name="formname" required/><br>
+        <label for="surname">Soyadınız</label>
+        <input type="text" placeholder="Soyadınızı girin..." size="30" name="formsurname" id="surname" required/><br>
+        <label for="passw">Şifre girin</label>
+        <input type="password" placeholder="****************" size="30" name="psw" id="passw" required/><br>
+        <input type="image" src="C:\Users\hsyna\Desktop\resim.jpg" alt="vesikalık foto" /><br>
+        <input type="date" min="2000-04-05" max="2019-09-10" /><br>
+        <label for="fileupload">Dosya Yükle</label>
+        <input type="file" id="fileupload" />
+        <h3>Renk seçiniz</h3>
+        <label for="male">Erkek</label><input type="radio" name="gender" id="male" value="male" checked="checked" /><br>
+        <label for="female">Kadın</label><input type="radio" name="gender" id="female" value="female" /><br>
+        <p>Yemek tercihleriniz</p>
+        <label for="lahmacun">lahmacun</label><input type="checkbox" name="lahmacun" value="lahmacun" id="lahmacun" /><br>
+        <label for="kebap">kebap</label><input type="checkbox" name="kebap" value="kebap" id="kebap" /><br>
+        <label for="iskender">iskender</label><input type="checkbox" name="iskender" value="iskender" id="iskeneder" /><br>
+        <label for="kellepaca">kelle paca</label><input type="checkbox" name="kellepaca" value="kellepaca" id="kellepaca" /><br>
+        <input type="datetime-local" name="tarih" /><br>
+        <input type="date" name="t" /><br>
+        <label for="yazialani">Yazı Alanı</label><br>
+        <textarea name="yazialani" id="yazialani" cols="30" rows="10" placeholder="Birşeyler yazınız..."></textarea><br>
+        <select name="sehirler" id="sehirler">
+            <option value="urfa">Urfa</option>
+            <option value="mersin">Mersin</option>
+            <option value="istanbul">İstanbul</option>
+            <option value="Adıyaman" selected>Adıyaman</option>
+            <option value="Sivas">Sivas</option>
+        </select>
+        <select name="yemekler" id="yemekliste">
+            <optgroup label="sulu">
+                <option value="mercimekcorbası">Mercimek Çorbası</option>
+                <option value="mercimekcorbası">Mercimek Çorbası</option>
+                <option value="mercimekcorbası" selected>Afsfsd Çorbası</option>
+                <option value="mercimekcorbası">Mercimek Çorbası</option>
+            </optgroup>
+            <optgroup label="etli">
+                <option value="tava">Tava</option>
+                <option value="tava">Tava</option>
+                <option value="tava">Tava</option>
+                <option value="tava">asdasd</option>
+            </optgroup>
+        </select>
+    </form>
+</body>
+
+</html>
