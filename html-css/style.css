@@ -1,0 +1,92 @@
+p,
+legend,
+fieldset,
+form {
+    color: white;
+    font-size: 20;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+body {
+    background-color: grey;
+}
+
+fieldset {
+    width: 500px;
+}
+
+#textbox {
+    border: black 1px solid;
+    text-indent: 50px;
+    width: 600px;
+    text-align: center;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-height: 300px;
+    overflow: auto;
+    font-size: 20px;
+    color: blue;
+    background-color: lightseagreen;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#textbox>h3 {
+    color: blue;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#textbox>#div2 h3:nth-child(4),
+#div2 h3:nth-child(2) {
+    text-align: right;
+    color: olive;
+}
+
+#textbox>#div2 h3:nth-child(6) {
+    text-align: start;
+    color: lightsalmon;
+    font-size: 30px;
+}
+
+#textbox>#div2 h3:nth-child(7),
+#div2 h3:nth-child(8),
+#div2 h3:nth-child(9) {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: right;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+#textbox>#div3>h3:nth-child(odd) {
+    text-align: left;
+    color: orangered;
+}
+
+#textbox>#div3>h3:nth-child(even) {
+    color: white;
+}
+
+#divson p {
+    background-color: chartreuse;
+    color: black;
+    font-weight: bold;
+}
+
+#Paragraf {
+    color: blue;
+    font-size: 20px;
+    margin: 20px;
+    text-align: justify;
+    text-indent: 30px;
+}
