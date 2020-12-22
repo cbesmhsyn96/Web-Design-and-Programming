@@ -1,37 +1,38 @@
 ﻿@using modelkullanimi.Models
 @model AnaModel
-    <div class="col-sm-12">
-        <div class="col-sm-6">
-            <div class="row row-cols-2">
-                <div class="card">
-                    <div class="card-header">
-                        AnaModel' in Yazısı
-                    </div>
-                    <div class="card-body">
-                        <blockquote class="blockquote mb-0">
-                            <p>@Model.anamodel_yazi</p>
-                            <footer class="blockquote-footer">Gösterilen yazı&nbsp;&nbsp;<cite title="Source Title">AnaModel</cite></footer>
-                        </blockquote>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        <div class="col-sm-6">
+    @Html.Partial("_liste_partial")
+<div class="col-sm-12">
+    <div class="col-sm-6">
+        <div class="row row-cols-2">
             <div class="card">
                 <div class="card-header">
-                    About Controller Mesajları
+                    AnaModel' in Yazısı
                 </div>
                 <div class="card-body">
                     <blockquote class="blockquote mb-0">
-                        <p>@ViewBag.Message</p>
-                        <p>@ViewBag.Message2</p>
-                        <footer class="blockquote-footer">Gösterilen yazılar&nbsp;&nbsp;<cite title="Source Title">Message,Message2</cite></footer>
+                        <p>@Model.anamodel_yazi</p>
+                        <footer class="blockquote-footer">Gösterilen yazı&nbsp;&nbsp;<cite title="Source Title">AnaModel</cite></footer>
                     </blockquote>
                 </div>
             </div>
+
         </div>
     </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header">
+                About Controller Mesajları
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>@ViewBag.Message</p>
+                    <p>@ViewBag.Message2</p>
+                    <footer class="blockquote-footer">Gösterilen yazılar&nbsp;&nbsp;<cite title="Source Title">Message,Message2</cite></footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="col-sm-12">
     <div class="col-sm-3">

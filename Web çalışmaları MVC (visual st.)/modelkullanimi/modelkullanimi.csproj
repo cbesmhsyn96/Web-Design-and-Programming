@@ -173,6 +173,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\BootstrapDeneme.cshtml" />
     <Content Include="Views\Home\AnaModel2Action.cshtml" />
+    <Content Include="Views\Home\_liste_partial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
