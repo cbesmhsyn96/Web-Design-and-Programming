@@ -1,0 +1,46 @@
+﻿@using modelkullanimi.Models 
+@model List<contact_model>
+@{
+    ViewBag.Title = "Contact";
+}
+<!--Bu sayfada sadece model listesi ve ViewBag verisi gösterildi.-->
+<div class="col-sm-12" style="margin-top:10px; border:1px solid;">
+    <div class="col-sm-6">
+        <h4>Burası Viewbag_model sınıfıyla oluşturulan listenin viewdeki çıktısı(ViewBag ile aktarıldı.)</h4>
+        @foreach (var item in (List<Viewbag_model>)ViewBag.viewbagmodel)
+        {
+            <div class="card col-sm-5" style="margin:10px;border:1px solid">
+                <div class="card-body">
+                    <h5 class="card-title">No --> @item.ID</h5>
+                    <p class="card-text">Name : @item.name</p>
+                    <p class="card-text">Brand : @item.brand</p>
+                    <p class="card-text">City : @item.city</p>
+                    <p class="card-text">District : @item.district</p>
+                    <a href="#" class="btn btn-primary">Go</a>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-sm-6">
+        <h4>Burası Model Verisinin Gösterildiği Yer</h4>
+        @foreach (var item in Model)
+        {
+        <ul class="list-group col-sm-4">
+            <li class="list-group-item active" aria-current="true">@item.sayi</li>
+            <li class="list-group-item">@item.yazi</li>
+            <li class="list-group-item">@item.varyok</li>
+        </ul>
+        }
+    </div>
+</div>
+<h4>Controllerda oluşturulan yani modeli olmayan dynamic listeyi ViewBag olarak viewe attım.</h4>
+<div class="col-sm-12">
+    <ul class="list-group" style="width:250px; margin-left:auto;margin-right:auto; text-align:center;">
+        <li class="list-group-item active" aria-current="true">Controllerda Oluşan Liste</li>
+        @foreach (var item in (dynamic)ViewBag.controllerViewBag)
+        {
+            <li class="list-group-item">@item</li>
+        }
+    </ul>
+</div>
+<h2>Here is Contact page.</h2>

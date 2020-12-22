@@ -1,0 +1,53 @@
+﻿@using modelkullanimi.Models
+@model AnaModel2
+@{
+    ViewBag.Title = "AnaModel2Action";
+}
+<h3 style="text-align:center;">AnaModel2Action View</h3>
+<p style="text-align:center;">Burası AnaModel2Action viewinin çıktısı.Burası AnaModel2 adlı çoklu modeli kullanıyor.</p>
+<div class="row">
+    <div class="col-sm-auto" style="margin-left:25%;margin-right:25%;">
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                Model3 Verileri
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">@Model.model3.sayi</a>
+            <a href="#" class="list-group-item list-group-item-action">@Model.model3.adet</a>
+            <a href="#" class="list-group-item list-group-item-action">@Model.model3.mevsim</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-12">
+    <div class="col-sm-6">
+
+        @foreach (var item in Model.model1)
+        {
+            <div class="col-sm-4" style="background-color:teal;">
+                <ul class="list-group">
+                    <li class="list-group-item active" aria-current="true">Model1 ID --> @item.ID</li>
+                    <li class="list-group-item">Sayı --> @item.sayi</li>
+                    <li class="list-group-item">Yazı1-->@item.yazi1</li>
+                    <li class="list-group-item">Yazı2-->@item.yazi2</li>
+                    <li class="list-group-item">Yazı3-->@item.yazi3</li>
+                </ul>
+            </div>
+        }
+    </div>
+    <div class="col-sm-6" style="background-color:blueviolet;">
+
+        @foreach (var item in Model.model2)
+        {
+            <div class="col-sm-6">
+                <ul class="list-group">
+                    <li class="list-group-item active" aria-current="true">Model2 ID --> @item.ID</li>
+                    <li class="list-group-item">Yazı1-->@item.yazi1</li>
+                    <li class="list-group-item">Yazı2-->@item.yazi2</li>
+                </ul>
+            </div>
+
+        }
+
+    </div>
+</div>
