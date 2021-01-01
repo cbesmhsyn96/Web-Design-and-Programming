@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .row{
+            background-color: grey;
+            height: 5rem;
+        }
+        div[class*="col"]{
+            text-align: center;
+            background-color:darkolivegreen;
+            border: 1px solid;
+        }
+    </style>
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <!--
+      col- : Ekstra küçük ekranlar, telefonlar vb. (576 px’den daha küçük ekranlar)
+      col-sm- : 576 px ve daha büyük ekranlar için kullanılır.
+      col-md- : 768 px ve daha büyük ekranlar.
+      col-lg- : 992 px ve daha büyük ekranlar.
+      col-xl- : 1200 px’ten daha geniş ekranlar.
+    -->
+    <h4 style="text-align: center; color:red;">Bootstrap Çalışmaları</h4>
+    <!--
+        container
+        container-fluid
+        row align-items-start              -----Dikeyde
+            align-items-center
+            align-items-end
+
+        row justify-content-start          -----Yatayda
+            justify-content-center
+            justify-content-around
+            justify-content-between
+
+        col align-self-start               -----Dikeyde
+            align-self-center
+            align-self-end
+
+        col-3 col-md-4 col-xl-2 ----------_->
+        sm ve daha küçük ____col
+        lg yi yazmadım. Onun boyutu md nin boyutunu alır.
+    -->
+    <div class="container">
+        <h4>Aşağıdaki satırda 4. satırla aynı mı kontrolü</h4>
+        <div class="row align-items-start">
+            <div class="col-3">sdf</div>
+            <div class="col-3">sdf</div>
+            <div class="col-3">sdf</div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row align-items-center">
+            <div class="col-3">asd</div>
+            <div class="col-3">sad</div>
+            <div class="col-3">sad</div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row justify-content-center">
+            <div class="col-3">asd</div>
+            <div class="col-3">sad</div>
+            <div class="col-3">sad</div>
+        </div>
+        <br/>
+        <br/>
+        <h4>Aşağıdaki satırda ilk satırla aynı mı kontrolü</h4>
+        <div class="row justify-content-start">
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+        </div>
+        <br/>
+        <br/>
+        <h4>Aşağıdaki satırda sağ ve solda boşluk olacak</h4>
+        <div class="row justify-content-around">
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row justify-content-between">
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <h5>Bu 18 birimden dolayı taşma</h5>
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-6 col-md-4">asd</div>
+            <div class="col-6 col-md-4">asd</div>
+            <div class="col-6 col-md-4">asd</div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-6 col-md-8"></div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="container">
+        <div class="row">
+          <div class="col-9">.col-9</div>
+          <div class="col-4">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+          <div class="col-6">.col-6<br>Subsequent columns continue along the new line.</div>
+        </div>
+      </div>
+    <!--Bootstrap Bundle with Popper-->
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
