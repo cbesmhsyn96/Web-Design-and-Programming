@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <br/>
+      <!--align-items- dikey hizalama-->
+      <!--align-self-  dive özel dikey hizalama-->
+      <!--justify-content-start center end around between  evenly(between around arası)yatay hizalama-->
+      <!--justify-content-between ile justify-content-around hizalamalarının
+      sağ ve sol boşluk miktarları arasında bir boşluk bırakmak için justify-content-evenly
+      demek gerekiyor.-->
+      <h1>Hello, mycode_2</h1>
+      <div class="container-fluid cont1">
+        <div class="row align-items-start">
+            <div class="col-3">sdf</div>
+            <div class="col-3">sdf</div>
+            <div class="col-3">sdf</div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row align-items-center">
+            <div class="col-3">sdf</div>
+            <div class="col-3">sdf</div>
+            <div class="col-3">sdf</div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row align-items-end">
+            <div class="col-3">sdf</div>
+            <div class="col-3">sdf</div>
+            <div class="col-3">sdf</div>        
+        </div>
+      </div>
+    <br/>
+    <hr>
+    <hr>
+    <br/>
+    <div class="container-fluid cont2">
+        <div class="row">
+            <div class="col-3 align-self-start">asd</div>
+            <div class="col-3 align-self-end">dd</div>
+            <div class="col-2 align-self-center">dddsf</div>
+            <div class="col-2 align-self-start">asd</div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row">
+            <div class="col-3 align-self-start">asd</div>
+            <div class="col-3 align-self-end">dd</div>
+            <div class="col-2 align-self-center">dddsf</div>
+            <div class="col-2 align-self-start">asd</div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row">
+            <div class="col-3 align-self-start">asd</div>
+            <div class="col-3 align-self-end">dd</div>
+            <div class="col-2 align-self-center">dddsf</div>
+            <div class="col-2 align-self-start">asd</div>
+        </div>
+    </div>
+    <br/>
+    <hr>
+    <hr>
+    <br/>
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row justify-content-center">
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row justify-content-end">
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row justify-content-around">
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row justify-content-between">
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row justify-content-evenly">
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+    <h4>İç içe satır sütun denemesi1</h4>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-4">we</div>
+                    <div class="col-4">ewr</div>
+                    <div class="col-4">ewr</div>
+                </div>
+                <div class="row">
+                    <div class="col-4">we</div>
+                    <div class="col-4">ewr</div>
+                    <div class="col-4">ewr</div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="col-3" style="background-color: blue!important;">sad</div>
+                <div class="col-3" style="background-color: red!important;">asd</div>
+                <div class="col-3" style="background-color: green!important;">ddd</div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <hr>
+    <hr>
+    <br/>
+    <br/>
+    <h4>İç içe satır sütun denemesi2(grid sınıflarını beraber kullandığım divleri de ekledim)</h4>
+    <div class="container-fluid">
+        <div class="row rowgrid_sınıflar">
+            <div class="col-12 col-md-4 col-xl-3">asd</div>
+            <div class="col-12 col-md-4 col-xl-3">asdasdasdasdasd</div>
+            <div class="col-12 col-md-4 col-xl-3">asd</div>
+            <div class="col-12 col-md-4 col-xl-3">asd</div>
+            <div class="col-12 col-md-4 col-xl-3">asd</div>
+            <div class="col-12 col-md-4 col-xl-3">asd</div>
+            <div class="col-12 col-md-4 col-xl-3">asd</div>
+            <div class="col-12 col-md-4 col-xl-3">asd</div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <div class="row align-items-start" style="background-color: lawngreen;">
+                    <div class="col-2">asd</div>
+                    <div class="col-2">asd</div>
+                    <div class="col-2">asd</div>
+                </div>
+                <br/>
+                <br/>
+                <div class="row align-items-center" style="background-color: maroon;">
+                    <div class="col-2">asd</div>
+                    <div class="col-2">asd</div>
+                    <div class="col-2">asd</div>
+                </div>
+                <br/>
+                <br/>
+                <div class="row align-items-end" style="background-color: mediumblue;">
+                    <div class="col-2">asd</div>
+                    <div class="col-2">asd</div>
+                    <div class="col-2">asd</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="row" style="background-color: olive;">
+                    <div class="col align-self-start">s-start</div>
+                    <div class="col align-self-center">s-center</div>
+                    <div class="col align-self-start">s-start</div>
+                    <div class="col align-self-end">s-end</div>
+                </div>
+                <br/>
+                <br/>
+                <div class="row justify-content-evenly" style="background-color: red;">
+                    <div class="col-3 align-self-start">s-start</div>
+                    <div class="col-3 align-self-center">s-center</div>
+                    <div class="col-3 align-self-start">s-start</div>
+                </div>
+                <br/>
+                <br/>
+                <div class="row justify-content-evenly" style="background-color: red;">
+                    <div class="col-3 align-self-start">s-start</div>
+                    <div class="col-3 align-self-center">s-center</div>
+                    <div class="col-3 align-self-start">s-start</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">Buralar</div>
+            <div class="col-6 col-md-3">Sonra</div>
+        </div>
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

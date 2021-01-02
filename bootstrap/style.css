@@ -1,0 +1,17 @@
+.row{
+    height: 100px;
+    background-color:black;
+}
+div[class*="col"]{
+    background-color: darkcyan;
+    border: 1px solid black;
+}
+.cont1{
+    background-color: dimgray;
+}
+.cont2{
+    background-color:blue;
+}
+.rowgridsınıflar{
+    height:auto!important;
+}
