@@ -7,11 +7,13 @@
     <!-- Bootstrap CSS -->
     <link href="css\bootstrap.min.css" rel="stylesheet">
     <style>
-    .col{
+    div[class*="col-"],div[class*="col"]{
     background-color:grey;
     color:black;
     font-weight: bold;
     text-align: center;
+    border-style: solid;
+    border-width: 1px;
     }  
     </style>
     <title>Hello, world!</title>
@@ -36,6 +38,7 @@
             <div class="col">s</div>
             <div class="col">s</div>
         </div>
+        <br/>
         <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 row-cols-lg-6">
             <div class="col">sdf</div>
             <div class="col">ff</div>
@@ -48,6 +51,14 @@
             <div class="col">w</div>
             <div class="col">bnmbnm</div>
             <div class="col">xx</div>
+        </div>
+        <hr>
+        <hr>
+        <hr>
+        <div class="row">
+          <div class="col">sütun1</div>
+          <div class="col-6">sütun2</div>
+          <div class="col">sütun3</div>
         </div>
     </div>
     <!-- Option 1: Bootstrap Bundle with Popper -->
