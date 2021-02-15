@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css\bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        div[class*="col"],div[class*="col-"]{
+            border: 1px solid;
+            background-color: lawngreen;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .row{
+            background-color: grey;
+            height: 150px;
+        }
+        #ozelrow{
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col-md-4">column 1</div>
+            <div class="col-md-4 offset-md-4">column 2</div>
+            <!--offset ile sağa dayalı-->
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <hr>
+    <div class="container">
+        <div id="ozelrow" class="row row-cols-2">
+            <div class="col offset-6">sdfsdf</div>
+            <div class="col">sdfsdf</div>
+            <div class="col offset-6">sdfsdf</div>
+            <div class="col">sdfsdf</div>
+            <div class="col offset-6">sdfsdf</div>
+        </div>
+    </div>
+    <script src="js\bootstrap.bundle.min.js"></script>
+</body>
+</html>
