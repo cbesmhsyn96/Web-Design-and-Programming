@@ -5,32 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css\bootstrap.min.css" rel="stylesheet">
+    <style>
+      *{
+       text-align: center; 
+      }
+      div[class*="row"]{
+        background-color:grey;
+        height:150px;
+      }
+      div[class*="col"],div[class*="col-"]{
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        border: 1px white;
+        border-style: dashed;
+      }
+      /*Bu kısmı sonradan ekledim.*/
+      #ozelrow{
+        background-color:grey;
+        border: none;
+      }
+    </style>
     <title>Document</title>
 </head>
 <body>
     <div class="container">
         <div class="row">
+          <div class="col order-last align-self-start">last</div>
+          <div class="col order-4 align-self-center">4</div>
+          <div class="col order-3 align-self-end">3</div>
+          <div class="col order-1 align-self-center">1</div>
+          <div class="col order-5 align-self-start">5</div>
+          <!--sıralama numaralerı 1-5 aralığında olduğu için-->
+          <div class="col order-8 align-self-end">8</div>
+          <div class="col order-7 align-self-end">7</div>
+          <div class="col order-6 align-self-end">6</div>
+          <div class="col order-first align-self-start">first</div>
+        </div>
+        <br/>
+        <div class="row align-items-center">
           <div class="col order-last">last</div>
           <div class="col order-4">4</div>
           <div class="col order-3">3</div>
-          <div class="col order-1">1</div>
+          <div class="col order-2">2</div>
           <div class="col order-5">5</div>
-          <!--sıralama numaralerı 1-5 aralığında olduğu için-->
-          <div class="col order-8">8</div>
-          <div class="col order-7">7</div>
-          <div class="col order-6">6</div>
+          <div class="col order-2">2</div>
+          <div class="col order-1">1</div>
           <div class="col order-first">first</div>
         </div>
         <br/>
-        <div class="row">
-          <div class="col order-last">last</div>
-          <div class="col order-4">4</div>
-          <div class="col order-3">3</div>
-          <div class="col order-2">2</div>
-          <div class="col order-5">5</div>
-          <div class="col order-2">2</div>
-          <div class="col order-1">1</div>
-          <div class="col order-first">first</div>
+        <div id="ozelrow" class="row align-items-md-end align-items-sm-start align-items-center row-cols-1 row-cols-sm-2 row-cols-md-4">
+          <div class="col ">asd</div>
+          <div class="col ">sdd</div>
+          <div class="col ">fff</div>
+          <div class="col ">ggg</div>
+        </div>
+      </div>
+      <br/>
+      <div class="container-fluid">
+        <div class="row align-items-center row-cols-sm-2 row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5" style="background-color:darkturquoise !important;">
+          <div class="col order-first order-sm-1 order-md-2 order-lg-first">(order-f sm 1 md 2 lg first)</div>
+          <div class="col order-2 order-sm-3 order-md-last order-lg-2">(o-2 md last last sm 3 lg 2)</div>
+          <div class="col order-3 order-sm-2 order-md-4 order-lg-3">(o-3 sm 2 md 4 lg 3)</div>
+          <div class="col order-4 order-sm-5 order-lg-4">(o-4 sm 5 md 5 lg 4)</div>
+          <div class="col order-5 order-sm-4 order-md-3 order-lg-last">(o-5 sm 4 md 3 lg last)</div>
         </div>
       </div>
     <script src="js\bootstrap.bundle.min.js"></script>
