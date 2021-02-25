@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../html_css_js dosyaları/bootstrap_calismalar/bootstrap/bootstrap.min.css">
+    <style>
+        *{
+            text-align: center;
+        }
+        [class="col"]:nth-child(even){
+            background-color: red;
+            color: white;
+            font-size: 20px;
+        }
+        [class="col"]:nth-child(odd){
+            background-color: grey;
+            color: white;
+            font-size: 20px;
+        }
+        [class*="l col-3 m-1"]:nth-child(even){
+            background-color: darkblue;
+            color:white;
+            font-size: 20px;
+        }
+        [class*="l col-3 m-1"]:nth-child(odd){
+            background-color: red;
+            color:white;
+            font-size: 20px;
+        }
+        [class*="r col-3 m-1"]:nth-child(even){
+            background-color: darkgreen;
+            color: white;
+            font-size: 20px;
+        }
+        [class*="r col-3 m-1"]:nth-child(odd){
+            background-color:indigo;
+            color: white;
+            font-size: 20px;
+        }
+        </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row row-cols-3">
+            <div class="l col-3 m-1">asdsdf</div>
+            <div class="l col-3 m-1">asdsdf</div>
+            <div class="l col-3 m-1">asdsdf</div>
+            <div class="l col-3 m-1">asdsdf</div>
+            <div class="l col-3 m-1">asdsdf</div>
+            <div class="l col-3 m-1">asdsdf</div>
+            <div class="l col-3 m-1">asdsdf</div>
+            <div class="l col-3 m-1">asdsdf</div>
+        </div>
+    </div>
+    <br>
+    <div class="btn btn-success">asdasdasd</div>
+    <br>
+    <hr>
+    <div class="row">
+        <div class="col-6 bg-transparent">
+            <div class="row justify-content-center row-cols-3">
+                <div class="l col-3 m-1">asdsad</div>
+                <div class="l col-3 m-1">asdsad</div>
+                <div class="l col-3 m-1">asdsad</div>
+                <div class="l col-3 m-1">asdsad</div>
+                <div class="l col-3 m-1">asdsad</div>
+                <div class="l col-3 m-1">asdsad</div>
+                <div class="l col-3 m-1">asdsad</div>
+                <div class="l col-3 m-1">asdsad</div>
+                <div class="l col-3 m-1">asdsad</div>
+            </div>
+        </div>
+        <div class="col-6 bg-transparent">
+            <div class="row justify-content-center row-cols-3">
+                <div class="r col-3 m-1">asdsad</div>
+                <div class="r col-3 m-1">asdsad</div>
+                <div class="r col-3 m-1">asdsad</div>
+                <div class="r col-3 m-1">asdsad</div>
+                <div class="r col-3 m-1">asdsad</div>
+                <div class="r col-3 m-1">asdsad</div>
+                <div class="r col-3 m-1">asdsad</div>
+                <div class="r col-3 m-1">asdsad</div>
+                <div class="r col-3 m-1">asdsad</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row justify-content-center bg-gradient" style="display: flex; align-items:center; background-color: indigo;">
+        <div class="col-2 bg-primary bg-gradient ml-0 mt-1 mb-1 p-2 text-white">asdasd</div>
+        <div class="col-2 bg-dark bg-gradient m-1 p-3 text-white">asdasd</div>
+        <div class="col-2 bg-secondary bg-gradient mt-1 mb-1 mr-1 ml-1 p-2 text-white">asdasd</div>
+        <div class="col-2 bg-danger bg-gradient mt-1 mb-1 mr-0 p-1 text-white">asdasd</div>
+    </div>
+    <script src="../html_css_js dosyaları/bootstrap_calismalar/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
