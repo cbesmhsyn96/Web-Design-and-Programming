@@ -1,0 +1,92 @@
+* {
+  font-family: 'Brush Script MT', cursive;
+}
+html,
+body {
+  height: 100%;
+}
+h2 {
+  border: 4px double;
+  border-radius: 20px;
+  width: 250px;
+}
+fieldset {
+  border: white 2px solid;
+  border-radius: 20px;
+}
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: white;
+}
+.d-flex>.form-control {
+  border-style: double;
+}
+.nav-item>.nav-link,
+.navbar-collapse>.navbar-brand {
+  border: 1px solid white;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 20px;
+}
+#navbar_css {
+  background-color: rgb(34, 34, 34);
+  width: 90%;
+}
+#portfolio {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#content_portfolio {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+#myphoto {
+  border: 2px solid white;
+}
+#info_portfolio_content {
+  border: 2px white solid;
+  border-radius: 20px;
+}
+#aboutme {
+  height: 100%;
+  text-align: justify;
+  display: flex;
+  align-items: center;
+}
+#about_text {
+  border-radius: 20px;
+  border: white solid 2px;
+}
+#search_button {
+  width: 90px;
+  color: white;
+  border-radius: 20px;
+  background-color: rgb(29, 29, 29);
+}
+#search_button:hover {
+  color: black;
+  background-color: white !important;
+  border: 1px solid black !important;
+}
+#projects {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#inside_content_projects {
+  border: white 2px solid;
+  border-radius: 20px;
+}
+#contact {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#send_button {
+  border-radius: 20px;
+  width: 100px;
+}
