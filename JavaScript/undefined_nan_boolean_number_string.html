@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <!--
+        String,Number,Boolean,undefined,NaN,false,true
+    -->
+    <p>vsa dfjsnadfşkjsadn</p>
+    <script>
+        "use strict";
+        let a=232;
+        let b;
+        console.log(`${Number(a+b)}`); //NaN
+        let c="324";
+        console.log(`${a+b+c}`);//NaN324
+        console.log(`${a+c+false}`);//232324false
+        console.log(`${Boolean(Number(a+b))}`);//false
+        console.log(`___________________________________`);
+        console.log(Number(true));//1
+        console.log(Number(false));//0
+        console.log(Number(null));//0
+        console.log(Number("sdfdsf"));//undefined 
+        console.log(`___________________________________`);
+        console.log(Boolean(0));//false
+        console.log(Boolean(1));//true
+        console.log(Boolean(undefined));//false
+        console.log(Boolean(NaN));//false
+        console.log(Boolean(Infinity));//true
+        console.log(Boolean(-345));//true
+        console.log("___________________________________");
+        document.write("String dünüşümleri burada<br>");
+        document.write(String(1/0)+" 1/0 işleminin sonucudur.<br>");//Infinity
+        document.write(String(0/0)+" 0/0 işleminin sonucudur.<br>");//NaN
+        document.write(String(undefined+234)+" undefined + 234 işleminin sonucudur.<br>");//NaN
+        document.write(String(false+true)+" false + true işleminin sonucudur.");//1(0+1=1)
+        console.write("---------------------------------");
+    </script>
+</body>
+</html>

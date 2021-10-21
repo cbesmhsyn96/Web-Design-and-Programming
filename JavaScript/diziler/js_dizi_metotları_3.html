@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        -------------------------------------------------------
+        DİZİ ELEMANLARI ÜZERİNDE KULLANILAN DÜZENLEME METOTLARI
+        pop
+        push
+        sort
+        reverse
+        shift
+        unshift
+        splice
+        -------------------------------------------------------
+
+
+        ----------------------------------------------
+        DİZİ ELEMANLARI ÜZERİNDE ARAMA YAPAN METOTLAR
+        indexOf
+        lastIndexOf
+        ----------------------------------------------
+
+
+        -----------------------------------------------------------------
+        DİZİ ELEMANLARI ÜZERİNDE KULLANILAN İTERASYON(YİNELEME) METOTLARI
+        foreach
+        every
+        some
+        filter
+        map
+        -----------------------------------------------------------------
+        
+        
+        ----------
+        DİZİ DEĞİŞKENLERİ ÜZERİNDE KULLANILAN DİĞER METOTLAR
+        concat   --- yeni_dizi=dizi.concat(parametreler);
+        yeni_dizi elemanları dizi elemanları ve parametre olarak concat metoduna geçirilen elemanlar.
+        DİZİYİ DEĞİŞTİRMİYOR. Eklenen yeni elemanlarla bir dizi oluşturuyor.
+        join     --- Dizideki elemanların arasına parametre olarak girilen ayıracı ekleyerek bir string
+        değeri oluşturur. Bu metot, geriye oluşturduğu bu string değeri döndürecektir.
+        slice    --- Bir dizinin bir indisindeki eleman dahil bir indise kadarki elemanlar ve bitiş indisi dahil kopyalar
+                  Kullanımları
+                  diziDegiskeni.slice(begin); ====> kopyalanacak eleman aralığının ilk indisi dahil dizi sonuna kadarki elemanlar
+                  diziDegiskeni.slice(begin,end);====> ilk kopyalacak elemanın indisi, son kopyalanacak elemandan sonraki indis
+                                                       yani end hariç beginden end e kadar
+        toString --- 
+    -->
+    <script>
+    let a=[1,2,43,54,5];    
+    let b=[1,2,43,54,5];    
+    let c=[1,2,43,54,5];    
+    let d=new Array();
+    d.push(54);//1,2,43,54,5,54
+    d.forEach((element,index) => {
+        if (index===0)console.log("d dizi dizisi elemanları");
+        console.log(`d[`+index+`] = ${element}`);
+    });
+    d.push(1,1,13,5,54,4,6,56,1,1);
+    a.forEach((element,index) => {if(index===0)console.log("a dizi elemanları");console.log(`a[`+index+`] = ${element}`);});
+    d.forEach((element,index) => {if(index===0)console.log("Tekrar d dizi elemanları");console.log(`d[`+index+`] = ${element}`);});
+    d=[];
+    d=a.concat("_____",b,c,"_____");
+    /*
+    a
+    _____
+    b
+    c
+    _____
+    */
+    d.forEach((element,index)=>{if(index===0)console.log("d dizisi elemanları");console.log(`d[`+index+`] = ${element}`);});
+    //d dizi değişti ama a b ve c dizi elemanlarında değişiklik olmadı.
+    ///////////////////////////////////////////////////////////////////
+    console.clear();
+    let dizi=[1,2,3,4,5,6,7,8,9];
+    let dizi2=[45,46,67,78,89,90];
+    let dizi3=[];
+    dizi3=dizi.concat("diziye_eklenen_1","diziye_eklenen_2","diziye_eklenen_3","diziye_eklenen_4");
+    //dizide değişme olmadı
+    console.log("dizi elemanları");
+    dizi.forEach(element=>{console.log(`${element}`);});
+    dizi3.forEach((element,index) => {if(index===0)console.log("dizi3 elemanları");console.log(`dizi3[`+index+`] = ${element}`);});
+    console.log("dizi dizi elemanları değişmedi");
+    console.log("dizi elemanları");
+    dizi.forEach(element=>{console.log(`${element}`);});
+    let metin=dizi.join("-"),metin_2;
+    console.log(metin);
+    dizi3=[];
+    dizi3=dizi.slice(2,5);
+    console.log(dizi3.join(" "));
+    metin_2=dizi3.toString();//toString virgülle ayırıyor.
+    console.log(metin_2);
+    //concat join toString slice
+    "use strict";
+    let dizi_1=[12,34,45,65,67];
+    let dizi_2=new Array();
+    dizi_2=dizi_1.concat(45,45,45,dizi_1,45,45,45);
+    console.log("dizi elemanları");
+    dizi_1.forEach(element => {console.log(`${element}`);});
+    dizi_2.forEach((element,index)=>{if(index===0)console.log("dizi_2 elemanları");console.log(`dizi_2[`+index+`] = ${element}`);});
+    console.log("dizi elemanları");
+    let metin_dizi_1=dizi_1.join("-");
+    console.log(metin_dizi_1);
+    for (let  index= 0;  index< dizi_1.length; index++) {
+       delete dizi_1[index];
+    }
+    console.log(dizi_1);
+    for (let index = 0; index < dizi_1.length; index++) {
+        dizi_1[index]=ekle(index);
+    }
+    console.log(dizi_1.join("  "));
+    function ekle(sayi){
+        return sayi+5;
+    }
+    dizi_2=dizi_1.concat(dizi_1.slice(2,4));
+    metin_dizi_2=dizi_2.join(" -- ");
+    console.log("dizi_2 elemanları");
+    console.log(metin_dizi_2);
+    console.log(dizi_2.toString());//toString virgüllü göstermeye yarıyor.
+    dizi=[];
+    dizi=[5,2,3,43,1,32,4,3,2,54,34,23,34,43,4,5,45,54,33];
+    console.log(dizi.toString());
+    console.log(dizi.join("   "));
+    console.log(`4 elemanı 9 indisine kadar en son `+dizi.lastIndexOf(4,9)+" indisinde var.");
+    console.log("34 elemanı 11 indisinden itibaren ilk "+dizi.indexOf(34,11)+" indisinde var.");
+    console.log("54 elemanı ilk "+dizi.indexOf(54)+" indisinde var");//9
+    console.log("43 elemanı en son "+dizi.lastIndexOf(43)+" indisinde var.");//13
+    dizi.splice(5,6,"eklendi_1","eklendi_2","eklendi_3","eklendi_4","eklendi_5","eklendi_6");
+    console.log(dizi.join(" - "));
+    /* foreach every some filter map 
+    foreach iterasyon fonksiyonunun her elemanı gezmesiyle elemanları gösterme
+    every ==>İterasyon fonksiyonu true döndüğü sürece devam eder. İlk false gördüğü yerde gezmeyi bırakır ve false döndürür. Sona kadar true ise true döndürür.
+    some  ==>İterasyon fonksiyonu false döndüğü sürece devam eder. İlk true gördüğü yerde gezmeyi bırakır ve true döndürür. Sona kadar false dönmüşse false döner. 
+    */
+    dizi.forEach((element,index) => {if(index===0)console.log("dizi elemanları");console.log(`dizi[`+index+`] = ${element}`);});
+    //Önce stringleri sil yerine 23,43,5,24,2,1,3,6,56,32,435,2 koy
+    dizi.splice(5,6,23,43,5,24,2,1,3,6,56,32,435,2);
+    //formatlı görüntüle
+    console.log(dizi.join(" "));
+    console.log(dizi.toString());//bir de virgüllü görüntüle
+    //every kullan
+    //önce boolean
+    let deger,_index;
+    //_index false dönen index i tutmak için.
+    deger=dizi.every(element=>{return element%2===0;});//5 döner
+    console.log(deger);//false
+    dizi.every((element,index)=>{_index=index;return element%2===0;});
+    console.log(`Çift olmayan ilk elemanın indisi ${_index} ve dizi[${_index}] = ${dizi[_index]}`);
+    dizi.every((element,index)=>{_index=index;return element%2!==0});
+    console.log(`Tek olmayan ilk elemanın indisi ${_index} ve dizi[${_index}] = ${dizi[_index]}`);
+    let ciftler=new Array(),tekler=new Array(),siniflandir_tek_cift=new Array(),teksayilar=new Array(),ciftsayilar=new Array();;
+    let tekindex=0,ciftindex=0;
+    /* ciftler=dizi.filter((element,index)=>{return element%2===0;});
+    tekler=dizi.filter((element,index)=>{return element%2!==0;});
+    ciftler.forEach((element,index) => {if(index===0)console.log("dizi elemanlarından çift sayılar");console.log(`ciftler[`+index+`] = ${element}`);});
+    tekler.forEach((element,index)=>{if(index===0)console.log("dizi elemanlarından tek sayılar");console.log(`tekler[`+index+`] = ${element}`);});
+ */ 
+    siniflandir_tek_cift=dizi.map((element,index)=>{if(element%2===0){ciftsayilar[ciftindex]=element;ciftindex++;return "Ç";}else{teksayilar[tekindex]=element;tekindex++;return "T";}});
+    siniflandir_tek_cift.forEach((element,index) => {if(index===0)console.log("siniflandir_tek_cift elemenları");console.log(`siniflandir_tek_cift[`+index+`] = ${element}`);});
+    teksayilar.forEach((element,index)=>{if(index===0)console.log("dizi elemanlarından tek sayılar");console.log(`teksayilar[`+index+`] = ${element}`);});
+    ciftsayilar.forEach((element,index)=>{if(index===0)console.log("dizi elemanlarından cift sayılar");console.log(`ciftsayilar[`+index+`] = ${element}`);});
+    console.clear();//console ekranı temizlendi.
+    /*
+    Şimdi mevsim ayları örneği
+    every,some,filter ve map
+    */
+    </script>
+    <!--
+        console.clear();
+    -->
+</body>
+</html>

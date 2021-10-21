@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //`use strict`;//bu şekilde değil
+       "use strict";//bu şekilde
+        /*
+        
+        //_____________Değişken oluşturmadan kullanmak hata verir.
+        a=54;
+        let b=37;
+        let c=a+b;
+        console.log(c);
+
+        */
+        
+        
+        /*
+        
+        //______________Değişken ve nesnenin silinmesine izin vermez.
+        let a;
+        a=34;
+        delete a; //değişkenin silinmesine izin vermedi
+        console.log(a);
+        
+        */
+        
+        /*
+
+        //Fonksiyonda aynı parametrenin iki defa yazılmasına izin vermez.
+        function fonk_adi(valuuue,valuuue){//"duplicate formal argument valuuue" hatası verdi.
+             return valuuue+valuuue;
+        }
+        
+        */
+
+        //Kaçış karakterlerine izin verilmez
+        //8lik numerik literallere izin vermez.
+        //8lik kaçış sekanslarına izin verilmez. İzin vermesi için \o010 gibi olmalı.
+        /*************16 lık için use strict ten bağımsız not*************/
+        //16lık nümerik literale not defined diyor. "use strict" yasağı yok.
+        //16 lık kaçış sekanslarında \xFF formatına izin veriyor.
+        
+        
+        
+        
+        /*
+        let a;
+        a=033;
+        console.log(a);//8 lik nümerik literal olduğundan ___hata___
+        */
+
+        /*
+        let a;
+        a="\034";
+        console.log(a);//8lik kaçış sekansı ___Hata___
+        */
+
+        
+        /*
+        let eval=12;
+        console.log(eval); //Hata verdi. eval değişken ismi olarak kullanılamaz
+        */
+
+        /*
+        let arguments =54;
+        console.log(arguments);//Hata verdi. arguments değişken ismi olarak kullanılamaz
+        */
+
+        
+
+    </script>
+</body>
+</html>

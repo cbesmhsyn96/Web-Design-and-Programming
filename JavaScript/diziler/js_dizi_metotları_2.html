@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        -------------------------- 
+        |dizi düzenleme metotları|
+        |pop                     |
+        |push                    |
+        |sort                    |
+        |shift                   |
+        |unshift                 |
+        |splice                  |
+        --------------------------
+        
+        splice --->
+        İlk kullanım   (first use)   --> splice(startIndex,deleteCount); 
+        İkinci kullanım(second use)  --> splice(startIndex,deleteCount,element(s)_to_add);
+
+        ------------------------------------------------------------------------------
+        dizi üzerinde arama metotları
+        ------------
+        indexOf
+        indexOf
+        indexOf(searchElement,first_search_index);
+
+        lastIndexOf ---> peramerterede belirtilen elemanla eşleşen son indisi döndürür
+        lastIndexOf(searchElement,last_search_index);
+        -------------------------------------------------------------------------------
+        dizi yineleme(iterasyon) metotları
+        foreach --> parametrelerde elemanları geziyor.
+        
+        every ---> false olana kadar dizi elemanlarını baştan sona gezer. False olunca döndürür.
+        foreach gibi element,indeks,array parametreli fonksiyon kullanır.
+        Fonksiyonla dizideki her eleman için test yapar. Fonksion false döndüğü anda metot false döner.
+        Diğer indekslere devam etmez. Her indeks için fonksiyon true dönerse every metodu true döner.
+        
+        some ---> everynin zıttı.Fonksiyondan true döndü mü çıkar. False olduğu sürece sonraki indisleri
+        kontrol etmeye devam eder. 
+        
+        filter-->Dizi elemanlarını baştan sona gezer. Yinelenen fonksiyonun koşulunu sağlayan elemanların oluşturduğu bir dizi oluşturur.
+        
+        map --> filter den farklı olarak elemanlardan değil çıktılardan bir liste oluşturur.
+
+        -----------
+        |concat   |
+        |join     |
+        |slice    |
+        |toString |
+        -----------
+         */
+
+
+         /*
+         pop();
+         */
+        let dizi=new Array(10);
+        for (let index = 0; index < dizi.length; index++) {
+            dizi[index]=String(index)+"__indisli eleman";
+        }
+        console.log("--------------------------------------------");
+        dizi.forEach((element,index,array)=>{console.log(`dizi[`+index+`] = ${element}`);});
+        console.log("--------------------------------------------");
+        console.log(`Son eleman olan ${dizi.pop()} elemanı silindi`);
+        dizi.forEach((element,index,array)=>{console.log(`dizi[`+index+`] = ${element}`);});
+        console.log("--------------------------------------------");
+        console.log("\"0_indisli_eleman_eklendi\" elemanını başa ekleyince eleman sayısı ==> "+dizi.unshift("0_indisli_eleman_eklendi"));
+        dizi.forEach((element,index,array)=>{console.log(`dizi[`+index+`] = ${element}`);});
+        console.log("--------------------------------------------");
+        console.log("Baştaki eleman olan "+dizi.shift()+ " elemanı silinince. Dizinin aldığı hal");
+        dizi.forEach((element,index,array)=>{console.log(`dizi[`+index+`] = ${element}`);});
+        console.log("--------------------------------------------");
+        console.log("Dizi sonuna \"sona_eleman_eklendi\" elemanını eklenmesi ile son eleman sayısı ==> "+dizi.push("sona_eleman_eklendi"));
+        dizi.forEach((element,index,array)=>{console.log(`dizi[`+index+`] = ${element}`);});
+        console.log("--------------------------------------------");
+        dizi.sort();//unicode a göre sıralama
+        console.log("Dizi üzerinde string sıralaması yapınca dizinin durumu");
+        dizi.forEach((element,index,array)=>{console.log(`dizi[`+index+`] = ${element}`);});
+        console.log("--------------------------------------------");
+        dizi.reverse();//unicode a göre sıralanmış diziyi ters sırada göster.
+        console.log("Dizi üzerinde string sıralamasını tersten(unicode a göre büyükten küçüğe) yapınca dizinin durumu");
+        dizi.forEach((element,index,array)=>{console.log(`dizi[`+index+`] = ${element}`);});
+        console.log("--------------------------------------------");
+        dizi.splice(2,0,"2_indisli_eleman_splice_ile_eklenen");
+        console.log("Son oluşan dizinin 2 indisine \"2_indisli_eleman_splice_ile_eklenen\" elemanının eklenmesinden sonra dizi");
+        dizi.forEach((element,index,array)=>{console.log(`dizi[`+index+`] = ${element}`);});
+        console.log("--------------------------------------------");
+        let dizi_silinenler=dizi.splice(5,3,"5_indisli_eleman_splice_ile_eklenen","6_indisli_eleman_splice_ile_eklenen","7_indisli_eleman_splice_ile_eklenen");
+        console.log("5 indisli elemandan başlayarak sonraki iki elemanı silip yerine \"5_indisli_eleman_splice_ile_eklenen\",\"6_indisli_eleman_splice_ile_eklenen\" ve \"7_indisli_eleman_splice_ile_eklenen\" yazılmasıyla dizi."+dizi_silinenler+" elemanları silindi.");
+        dizi.forEach((element,index,array)=>{console.log(`dizi[`+index+`] = ${element}`);});
+        console.log("--------------------------------------------");
+        console.log("=========================Dizi Elemanları Üzerinde Arama Metotları=========================");
+        dizi.forEach((element,index) => {console.log(`dizi[`+index+`] = ${element}`);});
+        console.log("0 indisinden başlanarak aranan "+"\"5_indisli_eleman_splice_ile_eklenen\""+" elemanı "+dizi.indexOf("5_indisli_eleman_splice_ile_eklenen")+" indeksinde bulundu.");
+        /*YENİ DİZİ TANIMLANIYOR*/
+        let dizi2=new Array(10);
+        for (let index = 0; index < dizi2.length; index++) {
+            dizi2[index]=Math.round(Math.random()*19+2);
+            /*
+            Bu bloktaki continue anahtarları yazılmasa da olur.
+            Ama görevini hatırlamak için ekledim.
+            Direk sonraki indeksten devam eder.
+             */
+            if (index==1){dizi2[index]=34;continue;};
+            if(index==3){dizi2[index]=22;continue;};
+            if(index==4||index==5){dizi2[index]=34;continue;}
+            if(index==7||index==8){dizi2[index]=22;continue;}
+        }
+        console.log("*****************************_______------->Oluşturulan Yeni Dizi");
+        dizi2.forEach((element,index,array)=>{console.log(`dizi2[`+index+`] = ${array[index]}`);});
+        console.log("=========================Dizi Elemanları Üzerinde İterasyon(Yineleme) Metotları=========================");
+        console.log(`indexOf(34) ile 34 içeren ilk indisteki dizi2[`+dizi2.indexOf(34)+`] elemanı 34`);
+        console.log(`indexOf(34, 5) ile 5 indisi ve sonraki indislerde 34 içeren ilk indisteki dizi2[`+dizi2.indexOf(34,5)+`] elemanı 34`);
+        console.log(`lastIndexOf(34) ile 34 içeren son indisteki dizi2[`+dizi2.lastIndexOf(34)+`] elemanı 34`);
+        console.log(`lastIndexOf(34,5) ile 5 indisi ve sonraki indislerde 34 içeren son indisteki dizi2[`+dizi2.lastIndexOf(34,5)+`] elemanı 34`);
+        console.log(`indexOf(22) ile 22 içeren ilk indisteki dizi2[`+dizi2.indexOf(22)+`] elemanı 22`);
+        console.log(`indexOf(22,4) ile 4 indisi ve sonraki indislerde 22 içeren ilk indisteki dizi2[`+dizi2.indexOf(22,4)+`] elemanı 22`);
+        console.log(`lastIndexOf(22) ile 22 içeren son indisteki dizi2[`+dizi2.lastIndexOf(22)+`] elemanı 22`);
+        console.log(`lastIndexOf(22,4) ile 4 indisi ve sonraki indislerde 22 içeren son indisteki dizi2[`+dizi2.lastIndexOf(22,4)+`] elemanı 22`);
+        let dizi3=new Array();
+        dizi3=[12,12,4,2,65,43,3,43,4,2,5,65,12,43,4,12,43,1,45];
+        console.log(`*****************************_______------->Oluşturulan Yeni Dizi`);
+        dizi3.forEach((element,index,array)=>{console.log(`(param. array ile)__________ ==> dizi3[`+index+`] = ${array[index]}`);});
+        console.log("--------------------------------------------");
+        console.log(`dizi3.indexOf(43) ==> `+dizi3.indexOf(43));//5
+        console.log(`dizi3.indexOf(43,5) ==> `+dizi3.indexOf(43,5));//5
+        console.log(`dizi3.lastIndexOf(43,8) ==> `+dizi3.lastIndexOf(43,8));//7
+        console.log(`dizi3.indexOf(5) ==> `+dizi3.indexOf(5));//10
+        console.log(`dizi3.indexOf(12,4) ==> `+dizi3.indexOf(12,4));//12
+        console.log(`dizi3.lastIndexOf(12) ==> `+dizi3.lastIndexOf(12));//15
+        console.log(`dizi3.indexOf(43,6) ==> `+dizi3.indexOf(43,6));//7
+        console.log(`dizi3.indexOf(12) ==> `+dizi3.indexOf(12));//0
+        console.log(`dizi3.lastIndexOf(12,5) ==> `+dizi3.lastIndexOf(12,5));//1
+        console.log(`dizi3.indexOf(3,2) ==> `+dizi3.indexOf(3,2));//6
+        console.log(`dizi3.lastIndexOf(4,2) ==> `+dizi3.lastIndexOf(4,2));//2
+        console.log(`dizi3.lastIndexOf(65,5) ==> `+dizi3.lastIndexOf(65,5));//4
+        console.log(`dizi3.indexOf(12,7) ==> `+dizi3.indexOf(12,7));//12
+        console.log(`dizi3.lastIndexOf(4,5) ==> `+dizi3.lastIndexOf(4,5));//2
+        console.log(`dizi3.indexOf(43,10) ==> `+dizi3.indexOf(43,10));//13
+        console.log(`dizi3.lastIndexOf(2,6) ==> `+dizi3.lastIndexOf(2,6));//3
+        console.log(`dizi3.lastIndexOf(4,10) ==> `+dizi3.lastIndexOf(4,10));//8
+        console.log(`dizi3.indexOf(2,6) ==> `+dizi3.indexOf(2,6));//9
+        console.log(`dizi3.indexOf(65,5) ==> `+dizi3.indexOf(65,5));//11
+        
+        /*every ve some*/
+        let degisken;
+        dizi3.every((element,index,array)=>{degisken=element; return element>10;});
+        console.log(`10 ten büyük olmayan ilk sayı ${degisken}`);
+        degisken=null;
+        dizi3.some((element,index,array)=>{degisken=element; return element>30;});
+        console.log(`30 dan büyük ilk sayı ${degisken}`);
+        console.log("_______________Yeni dizi tanımlanıyor_______________");
+        let variablle,_index;
+        let dizi4=[-12,12,32,21,9,-8,44,23,-13,34,-65];
+        let res_every=dizi4.every(item=>{variablle=item; return item<-10})
+        console.log("dizi4 e every metodu uygulandı. Dönen sonuç --->"+variablle);//12
+        let res_some=dizi4.some((item,index)=>{variablle=item; _index=index; return item**2<100});
+        console.log("dizi4 e some metodu uygulandığında dönen sonuç variablle --> "+variablle+"_index ---> "+_index);
+        console.log("every --> "+res_every);
+        console.log("some  --> "+res_some);
+        let odd_numbers=dizi4.filter((item,index,array)=>{return (item%2!==0); });
+        console.log("Odd numbers");
+        odd_numbers.forEach(element => {console.log(`${element}`)});
+        let sinif_=[
+            {cinsiyet:"erkek",isim:"Muhammed"},
+            {cinsiyet:"erkek",isim:"Ahmed"},
+            {cinsiyet:"kadın",isim:"Meryem"},
+            {cinsiyet:"kadın",isim:"Fatıma"},
+            {cinsiyet:"erkek",isim:"Ali"},
+        ];
+        let erkek_isimleri=sinif_.filter((item,index,array)=>{return item.cinsiyet=="erkek"});
+        let kadin_isimleri=sinif_.filter((item,index,array)=>{return array[index].cinsiyet=="kadın"});
+        console.log("Erkek isimleri");
+        erkek_isimleri.forEach(element => {console.log(element);});
+        console.log("Kadın isimleri");
+        kadin_isimleri.forEach(element=>{console.log(element)});
+        
+        let mounts_ofthe_seasons=[
+            {season:"Spring",mount:"March"},
+            {season:"Autumn",mount:"September"},
+            {season:"Winter",mount:"January"},
+            {season:"Summer",mount:"July"},
+            {season:"Autumn",mount:"October"},
+            {season:"Summer",mount:"June"},
+            {season:"Winter",mount:"February"},
+            {season:"Summer",mount:"August"},
+            {season:"Autumn",mount:"November"},
+            {season:"Winter",mount:"December"},
+        ];
+        
+        let numbers_list=new Array(50), _mount,evens_list=new Array(),odds_list=new Array(),_isaretkontrol;
+        let _positive_numbers=new Array(),_negative_numbers=new Array();
+        for (let index = 0; index < numbers_list.length; index++) {
+            numbers_list[index]=Math.round(Math.random()*30-10);
+        }
+        _isaretkontrol=numbers_list.every(element=>{return element>0;});
+        numbers_list.forEach((element,index) => {if (index==0)console.log("Number List");console.log(`number_list[`+index+`] = `+element);});
+        if (_isaretkontrol){console.log("All of the numbers are positive.");}else{console.log("Negative number detected.");}
+        evens_list=numbers_list.filter((item,index,array)=>{return item%2==0;});//Çift sayılardan oluşan bir dizi
+        odds_list=numbers_list.filter(item=>{return item%2!==0;});//Tek sayılardan oluşan bir dizi
+        evens_list.forEach((even_number,index,evens) => {if(index==0)console.log("Even Numbers");console.log(`evens[`+index+`] = ${evens[index]} veya even_number = ${even_number}`)});
+        odds_list.forEach((odd_number,index,odds) =>{if(index==0)console.log("Odd Numbers");console.log(`odds[`+index+`] = ${odds[index]} veya odd_number = ${odd_number}`)});
+        mounts_ofthe_seasons.some((item,index,array)=>{_mount=item.mount; return array[index].season=="Winter"});
+        console.log("Bulunan ilk kış mevsimi ayı => "+_mount);//January
+        mounts_ofthe_seasons.every((item,index,array)=>{_mount=item.mount;return item.season=="Spring"});
+        console.log("İlkbahar(Spring) olmayan ilk ay ==> "+_mount);//September
+        _positive_numbers=numbers_list.filter((number,index)=>{return number>0;});
+        _negative_numbers=numbers_list.filter(number=>{return number<0;});
+        console.log("Positive numbers");_positive_numbers.forEach(number=>{console.log(`${number}`)});
+        _negative_numbers.forEach((number,index)=>{if(index==0)console.log("Negative numbers");console.log(`${number}`);});
+        dizi4.forEach((element,index) => {
+            if(index==0)console.log("_____________________________dizi4 elemanları");
+            console.log(`${element}`);
+        });
+        let map_dizi4=new Array(),map_dizi4_2=new Array();
+        map_dizi4=dizi4.map((item,index)=>{return item+50;});
+        map_dizi4.forEach((element,index) => {
+        if (index==0)console.log("map_dizi4 elemanları(dizi4 elemanlarının her birine 50 eklenmiş hali)");
+        console.log(element);});
+        map_dizi4_2=dizi4.map((item,index)=>{if(item%2==0){return "Çift";}else{return "Tek";}});
+        index=0;
+        while(index<map_dizi4_2.length){if(index==0)console.log("map_dizi4_2 elemanları (while ile)");console.log(`map_dizi4_2[`+index+`] = `+map_dizi4_2[index]);index++;}
+        map_dizi4_2.forEach((item,index)=>{if(index==0)console.log("map_dizi4_2 elemanları (foreach ile)");console.log(`map_dizi4_2[`+index+`] = ${item}`)});
+        ///////////////////////////////////////////////////////////////////////////////////////////////
+        let dizi5=[1,23,1,32,4334,55,234,23,523],dizi5_ekle=new Array();
+        dizi5_ekle=dizi5.concat(12,12,12,12,12);
+        dizi5_ekle.forEach((element,index) => {
+            if (index===0)console.log("dizi5 e eklenen yeni elemanlar(dizi5 in önceki elemanları dahil)");
+            console.log(`dizi5_ekle[`+index+`] =${element}`);
+        });
+        dizi5.forEach((element,index)=>{if(index===0)console.log("dizi5 elemanları (concat ile eklenenler hariç)");console.log(`dizi5[`+index+`] = ${element}`)});
+        console.clear();
+        ////////////////////////////////////////
+        /*
+        Dizi elemanları üzerinde yineleme(iterasyon) metotları
+        foreach,every,some,filter,map
+        Bunların hepsi bir yineleme fonksiyonu kullanır.(element(zorunlu),index,array)
+        foreach(anyname_fonk)
+        anyname_fonk(element(required/gerekli),index,array){
+            //code block
+        }
+        every -->false gördü mü false döndürür
+                 dizi sonuna kadar true döndü ise true döndürür.
+        some  -->true gördü mü true döndürür
+                 dizi sonuna kadar false  döndü ise false döndürür.
+        filter-->yineleme fonksiyonundaki koşulu sağlayan elemanlardan oluşan yeni bir dizi üretir.
+        map   -->yineleme fonksiyonunda elemanlar için dönen değerlerden yeni bir dizi üretir.
+        */
+        ////////////////////////////////////////
+        
+        /*------------------------------------*/
+        /*
+        DİZİ DEĞİŞKENLERİ ÜZERİNDE KULLANILAN DİĞER METOTLAR
+        concat ---> yeni_dizi=dizi.concat(parametreler);
+        yeni_dizi elemanları dizi elemanları ve parametre olarak concat metoduna geçirilen elemanlar.
+        DİZİYİ DEĞİŞTİRMİYOR. Eklenen yeni elemanlarla bir dizi oluşturuyor.
+        join ---> dizi elemanları arasına sembol koymak için...? yazılacak
+        (slice 
+        toString) yazılacak
+        */
+        /*------------------------------------*/
+
+        //every true olduğu sürece devam et false ise false döndür hepsi true ise true
+
+        //some false olduğu sürece devam et true ise true döndür hepsi false ise false
+
+        /* 
+        every foreach gibi 3 parametreli((item,index(opt.),array(opt.))) fonksiyonla kullanılıyor. 
+        fonksiyon false döndüğü anda every false dönüyor. 
+        */
+
+        /*
+        some every nin zıttı aynı şekilde forech gibi 3 parametreli((item,index(opt.),array(opt.)))
+        fonskiyonla kullanılıyor.
+        Fonksiyon true döndüğü anda some işlemi durduruyor ve true döndürüyor. 
+        */
+
+        /*
+        filter metodu yineleme fonksiyonunda true döndüren elemanlardan oluşan yeni bir dizi oluşturuyor.
+        false döndürenlere karışmıyor.
+         */
+
+
+         //foreach te fonskiyonda birden fazla parametre varsa parateze almak zorundayız
+
+
+        //shift baştaki elemanı siler ____
+        //unshift başa ekleme yapar ____
+        //pop sondaki elemanı siler ____
+        //push sona eleman/elemanlar ekler ____
+        //sort stringlerde unicode a göre sıralama yapar. ____
+        //Sayılar için ayrı fonksiyon yazılmalı. ____
+        
+        //splice diziden eleman(lar) silme veya diziye eleman(lar) ekleme ____
+        
+        //indexOf dizi içerisinde eleman aramak için. Elemanı ilk bulduğu indisi döndürür
+        //indexOf(eleman) veya
+        //indexOf(eleman,aranacak_ilk_indis)
+
+        //lastIndexOf dizi içerisinde eleman aramak için kullanılır. Elemanı son indisi döndürür.
+        //lastIndexOf(eleman) veya
+        //lastIndexOf(eleman,aranacak_son_indis)
+    </script>
+</body>
+</html>

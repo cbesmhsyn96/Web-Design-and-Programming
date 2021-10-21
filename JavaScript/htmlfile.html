@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let num,num2,num3,num4,num5;
+         //num=0xA; use strict ile hata
+         //num2=050; use strict ile hata
+         //num3=05; use strict ile hata
+         num4=Number.MAX_VALUE;
+         num5=Number.MIN_VALUE;
+        console.log(`<br><br>(num4 -- ${num4})(num5 -- ${num5})`);
+    </script>
+    <!--
+        draggabe ve dropzone script kuduyla beraber kullanılıyor.
+    -->
+    <h3 contenteditable="true">Head Text(contenteditable)</h3>
+    <div class="class_p" contenteditable="true">
+        <pre dir="rtl">
+            Martıların gözlerinden dinledim
+            İstanbul'un boğazı yanmış dün gece
+            Yıldızlar şahitlik etmiş, güya suçlu benmişim
+            Oysa can, yemin olsun yanağımdan süzülen denize
+            Ben bu şehre yüreğimi içirmedim
+            
+            Göklerden hicran yağdı, İstanbul'lu bir geceydi
+            ..
+        </pre>
+    </div>
+<hr>
+    <p contenteditable="true">
+        <h4>Başlık</h3>
+        dewededwdew
+        <blockquote><strong>dasdasdasdasdasdadasdasd</strong></blockquote>
+        sdfsdfsfs
+        ffffffffffffff
+        tamam
+    </p>
+    <hr>
+<!--Sadace divle kapsama yapıldığında kalıtım oluyor-->
+    <div contenteditable="true">
+        <p>
+            asasdasdasdasdasdasdasdasd
+            asdsd<br>
+            <h5>Başlık2</h5>
+            <p>sdsdfsdfdffffffffffffff</p>
+        </p>    
+    </div>
+    <hr>
+    <pre>
+        <h3>                                            script etiketinin öznitelikleri</h3>
+        src="kaynak(url/path)" --> harici js dosyasının kaynağını belirtir
+        async="true/false" --> Harici JScript dosyasındaki kodların eşzamansız olarak çalıştırılmasını sağlar
+        defer="true/false" --> Harici bir js dosyasındaki kodların sayfa yüklendikten sonra çalıştırılmasını sağlar.
+        `İsteğe bağlı` type="type/MIME_type" --> Script elemanının içerik tipini belirtmek için kullanılır.
+        charset="karakter seti adı" --> Karakter kümesinin tanımı için kullanılır. tr için utf-8
+    </pre>
+    <hr>
+    
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4 id="bnot_id"></h4> 
+    <!--<p id="tamad_id"></p>-->
+        <p id="age_id"></p>
+        <script>
+        let ad,soyad,tamad;
+        ad=`Hüseyin`;
+        soyad=`Akcan`;
+        tamad=ad+` `+soyad;
+                            //document.getElementById("tamad_id").innerHTML=tamad;
+                            /**************************************************/
+        /*let age;
+        age=prompt(`How old are you ?`,18);
+        if (age!=18) {
+            alert(`If only you be 18 :(`);
+        } else {
+            document.getElementById(`age_id`).innerHTML=age;
+            alert(`Welcome ${tamad}`);
+        }*/
+        /* alert(`Emin olmak için typeoftektırnak ==> ${typeof ``}`);
+        document.write(`Emin olmak için typeoftektırnak ==> ${typeof ``}<br>`);
+        alert(`typeof (iki tek tırnak) ${typeof ``}`);
+        document.write(`typeof (iki tek tırnak) ${typeof ``}<br>`);
+        alert(`typeof (Türkiye yazı olarak) --> ${typeof `Türkiye`}`);
+        document.write(`typeof (Türkiye yazı olarak) --> ${typeof `Türkiye`}<br>`);
+        alert(`typeof 12 --> ${typeof 12}`);
+        document.write(`typeof 12 --> ${typeof 12}<br>`);
+        alert(`typeof false --> ${typeof false}`);
+        document.write(`typeof false --> ${typeof false}<br>`);
+        alert(`typeof undefined --> ${typeof undefined}`);
+        document.write(`typeof undefined --> ${typeof undefined}<br>`);
+        alert(`typeof null --> ${typeof null}`);
+        document.write(`typeof null --> ${typeof null}<br>`);
+        document.write(`<h3 style="color: orange;">Some prompts and confirms</h3>`); */
+        /*let vize,final,bnotu;
+        vize=prompt(`Vize notu girin `,`50`);
+        final=prompt(`Final notu girin `,`50`);
+        bnotu=vize*0.30+final*0.70;
+        bnotu>=60?alert(`Tebrikler dersi geçtiniz :)`):alert(`Büte kaldınız :(`)
+        let tercih=confirm("Büte girmek ister misiniz ?");
+        if (tercih) {
+            alert(`İyi çalışmalar !`);
+        }else{
+            if (bnotu<=60) {
+                alert("Neden böyle yapıyorsun hislerimle oynuyorsun :( !");
+            } else {
+                alert("Keyfine bak bro... :)");
+            }
+        }*/
+        /* document.write(`<hr>`);
+        document.getElementById(`typeof_id`).innerHTML=typeof function conditionn() {
+            let numberr=2323;
+            document.write(numberr/0);
+        }
+        document.write(`<hr>`); */
+        //String
+        //Number
+        //Boolean
+        let cevir_str;
+        let cevir_bool;
+        let cevir_number;
+        let str;
+        let numb;
+        let booleann;
+        /*********Boolean ile bool a çevirip string olarak gösterme*********/
+        document.write(`${Boolean("")}<br>`);//false
+        document.write(`${Boolean(NaN)}<br>`);//false
+        document.write(`${Boolean(undefined)}<br>`);//false
+        document.write(`${Boolean(null)}<br>`);//false
+        document.write(`${Boolean(Infinity)}<br>`);//true
+        document.write(`${Boolean(-123123)}<br>`);//true
+        document.write(`${Boolean(12312)}<br>`);//true
+        /***Number fonksiyonu kullanma**/
+        document.write("<br>");
+        document.write(`${Number(undefined)}<br>`);//NaN
+        document.write(`${Number(true)}<br>`);//1
+        document.write(`${Number(false)}<br>`);//1
+        document.write(`${Number(null)}<br>`);//0
+        document.write(`<hr>`);
+        document.write(`1`+1+`<br>`);//11 verir
+        document.write(`1`+`1`+`<br>`);//11 verir
+        document.write(1+1+`<br>`);//2 verir
+        /***2 2 2 versin***/
+        document.write(`<hr>2 2 2 verecek.<br><br>`);
+        document.write(Number("1")+1+` `);//2
+        document.write(Number(`1`)+Number(`1`)+` `);//2
+        document.write(1+1+`<br>`);//2
+        /************************************************/
+        //Kullanıcı vize ve finale sayı olarak girer. Programın da kesin olarak sayı algılaması için
+        let vize;
+        let final;
+        let bnotu;
+        let i;
+        vize=prompt("Vize ","50");
+        final=prompt("Final","50");
+        vize=Number(vize);
+        final=Number(final);
+        bnotu=vize*0.30+final*0.70;
+        document.getElementById("bnot_id").innerHTML=String(bnotu);
+        for(i=0;i<5;i++){
+            if (i%2==0)continue
+            document.write(`<h1>JavaScript</h1><br>`);
+        }
+        document.write("İki kere JavaScript yazdı.");
+        </script>
+</body>
+</html>

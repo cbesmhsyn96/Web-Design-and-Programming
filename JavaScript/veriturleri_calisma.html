@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fonk2(){
+            degisken=12312; //bu değişkeni en üstte 
+        }
+    </script>
+    <!--
+        fonksiyon içinde bir global değişken tanımlamak istiyorsan
+        tanımladığın fonksiyon en üst kapsamda olmalı yani head içine
+    -->
+</head>
+<body>
+    <script>
+        let c=23;
+        function fonk(){
+            d=232;
+        }
+    </script>
+    <script>
+       // console.log(`d --> ${d}`);//İki script te kod içinde. O yüzden erişemedi.
+        console.log(`c --> ${c}`);
+    </script>
+    <script>
+        fonk2();
+        console.log(`degisken ---> ${degisken}`);
+    </script>
+</body>
+</html>

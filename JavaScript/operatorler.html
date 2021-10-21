@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+    <!-- 
+    Operand işlenen anlamına geliyor.
+    -------------------------------------------------------------------
+    Bir operand(işlenen) olan operatörler                       unary
+    -------------------------------------------------------------------
+    İki operand alan operatörler                                binary
+    -------------------------------------------------------------------
+    Üç operand alan operatörler                                 ternary
+    -------------------------------------------------------------------
+    ______Yeni gördüğüm operatörler_____
+    === tip ve değer olarak eşit
+    !== tip ve değer olarak eşit değil
+    ____?____
+       değişken=(koşul)?(koşul sağlandıysa değişkene atanacak):(koşul sağlanmadıysa değişkene atanacak)
+        veya
+        (koşul)?(koşul sağlandıysa olacaklar):(koşul sağlanmadıysa olacaklar)
+    -->
+    
+    <script>
+        "use strict";
+        //&& || ve ! operatörleri
+        /*
+        && ---> ve operatörü (bir tanesi false ise sonuç false)
+        || ---> veya operatörü (bir tanesi true ise sonuç true)
+        !  ---> değil operatörü ( !(true) == false  _____ !(false) == true)
+        */
+    console.log("Normal Eşitlik Sınaması");
+        if (3=="3" && 3==3) {
+         console.log("Eşitlik sağlandı. Değer olarak eşit. \"3\" == 3 && 3 == 3");
+    }else{
+         console.log(" \"3\" != 3 && 3!=3");
+    }
+
+    console.log("Normal Eşitsizlik Sınaması");
+    if (3!=4&&3!="4") {
+        console.log("3!=4 && 3!=\"4\" eşitliği doğru bir ifadedir.(true)");
+    } else {
+        console.log("3!=4 && 3!=\"4\" eşitliği yanlış bir ifadedir.(false)");
+    }
+
+    console.log("Katı Eşitlik Sınaması(Tip ve değer olarak eşit olmalı)");
+    if (3==="3") {
+        console.log("3 ===\"3\" katı eşitlik sınaması true sonucu döndürdü.");
+    }else{
+        console.log("3 ===\"3\" katı eşitlik sınaması false sonucu döndürdü.");
+        console.log("3!==\"3\" katı eşitsizlik sınaması true sonucu üretir.");
+        console.log("Katı eşitliğin sağlanması için iki operand tip ve değer olarak eşit olmalı.");
+    }
+
+    (1=="1"||2==5&&6!=="6")?console.log("\"1\" == 1 eşitlik sınamasının çıktısı true olur. Bu yüzden sonuç true."):console.log("Buraya gelmeyecek.");
+    
+    //Çıktısı
+    /*
+    Normal Eşitlik Sınaması
+    Eşitlik sağlandı. Değer olarak eşit. "3" == 3 && 3 == 3
+    Normal Eşitsizlik Sınaması
+    3!=4 && 3!="4" eşitliği doğru bir ifadedir.(true)
+    Katı Eşitlik Sınaması(Tip ve değer olarak eşit olmalı)
+    3 === "3" katı eşitlik sınaması false sonucu döndürdü.
+    3! == "3" katı eşitsizlik sınaması true sonucu üretir.
+    Katı eşitliğin sağlanması için iki operand tip ve değer olarak eşit olmalı.
+    "1" == 1 eşitlik sınamasının çıktısı true olur. Bu yüzden sonuç true.
+    */
+
+    /*
+    BITWISE(BİTSEL) OPERATÖRLER
+    &  ---> AND          2 operand (binary operatör)
+    |  ---> OR           2 operand (binary operatör)
+    ^  ---> XOR          2 operand (binary operatör)
+    ~  ---> NOT          1 operand (unary operatör)
+    << ---> Sola kaydır  Kullanımı ______--------___----> a<<b (a sayısını bitsel olarak b kadar sola kaydır)
+    >> ---> Sağa kaydır  Kullanımı ------________---____
+    
+
+    */
+   
+   let a,b;
+        a=5;
+        b=7;
+        //a<<=b ----> a yı bitsel olarak b kadar sola kaydır. Sağda kalan yerleri 0 ile doldur.
+        /* console.log("a<<=b --->" + String(a<<=b));
+        console.log("a>>=b --->" + String(a>>=b));
+        console.log("a&=b  --->"+ String(a&=b));
+        console.log("a|=b  --->"+ String(a|=b));
+        console.log("a^=b  --->"+ String(a^=b));
+        console.log("a = "+ String(a)+" b ="+ String(b));
+        console.log("a~=a --->"+ String(!a));//a nın bitsel olarak değilini alır
+        console.log("________________________"); */
+        //in ve delete
+        /* let x;
+        x=12323,
+        delete x; //izin vermez */
+        /* let d1=34;
+        delete d1; //değişken silmeye izin vermez */
+        //console.log(nesne.ad);
+
+
+
+
+        //_______----________----________----_________----___"use strict"; 
+        //bir nesne özelliğinin içeriğini silmeye izin verdi ------>delete nesne.ad;
+        //nesne, fonksiyon ve değişken silinmesine izinvermedi ------>delete nesne; _ve_ delete degisken;
+        //dizide belirli bir indisteki elemanı silmeye izin verdi ------>delete(dizi[3]);
+
+
+
+
+       
+        /* let dizi=["Derviş","Hüseyin","Salim","Ercan"];
+        delete (dizi[3]);
+        for (let index = 0; index < dizi.length; index++) {
+            console.log(dizi[index]);
+        } */
+
+        //IN operatörü bir nesnede bşr özelliğin var olup olmadığını öğrenmek için kullanılır.
+        //in operatörünü kullanırken aranacak nesne özelliği adını "" veya `` içine yazıyoruz.
+        const nesne={
+            ad:"Mahmud",
+            soyad:"Bosna"
+        };
+        function expo(a,b) {
+            return a**b;
+        }
+        (Boolean(`ad` in nesne))?console.log("ad özelliği nesnede tanımlı."):"";
+        (!Boolean("sss" in nesne))?console.log("sss özelliği nesnede tanımlı değil."):"";
+        console.log(`--------------------------------------------------------`);
+        console.log("nesne nin tipi(object diyecek) "+(typeof nesne));
+        //delete expo;//silinemez "use strict"; ten dolayı
+        
+        console.log(typeof expo);//function
+        console.log(typeof null);//object
+        console.log(typeof undefined);//undefined
+        console.log(typeof nesne);//object
+        console.log(typeof false);//boolean
+        console.log(typeof true);//boolean
+        console.log(typeof "");//string
+        console.log(typeof Infinity);//Number
+        console.log(typeof NaN);//Number
+        
+    </script>
+</body>
+</html>

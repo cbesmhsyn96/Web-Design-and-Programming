@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let c=23;
+        function fonk(){
+            let a=23;
+            b=45;
+        }
+        fonk();
+        console.log(`b değişkeni verisi ---> ${b}`);//erişti
+        console.log(`a değişkeni verisi ---> ${a}`);//erişilemedi
+        console.log(`c değişkeni verisi ---> ${c}`);//erişmedi
+        //c değişkeninşn globallik kzanması için tipini vermem lazım
+        // a değişkeni yerel(local)
+        //b değişkeni global ama use strict kullanımında hata verir
+        
+    </script>
+</head>
+<body>
+    <script>
+        console.log(`b değişkeni diğer scriptte ---> ${b}`);
+        console.log("c global değişkenine erişim");
+        console.log(`c ---> ${c}`);
+        //b değişkeninin genel(global)
+    </script>
+</body>
+</html>

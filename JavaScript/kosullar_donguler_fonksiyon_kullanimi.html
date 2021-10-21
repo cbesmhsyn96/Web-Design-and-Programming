@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Koşul ifadeleri
+        if
+        if else
+        if else if else
+        if else if else if ... else
+        if if...
+        Döngüler
+        for
+        tamam
+
+
+
+        ____________while____________
+        while (şart) {
+            //kodlar
+        }
+        Kod yada kod grubu, tanımlanan şart doğrulandığı sürece
+        true değeri ürettiği sürece çalışır. Şart, tek başına bir şart deyimi
+        ya da bir şart ifadesi olabilir.
+        for döngüsüne nazaran hataya daha açık bir döngü yapısıdır.
+        while anahtarına iliştirilen parantezler içerisine yazılan şart,
+        genelde döngüye giremeden oluşturulmuş bir değişken ile kurgulanır.
+        Bunun yanında döngü şartında kullanılan değişkenin değeri, döngü içerisinde
+        işlemler yapıldıktan sonra azaltılmalı yada arttırılmalıdır.
+        Aksi durumda sonsuz döngü olur.
+        
+        __________do-while___________
+        Şart sağlandığı sürece(true döndüğü sürece) döngü devam eder.
+        işlemler do while blogu içindedir
+
+        __________for..in____________
+        for .. in ile dizinin veya nesnenin elemanlarının tümünü dolaşıyor.
+
+
+        _______break-continue________
+        break döngüyü durdurmak için
+        continue o anki durumu atlamak için.
+        continue şartı sağlandığında continue; altındaki kodlar çalışmaz.
+
+
+
+
+isNaN----> sayı değilse true, sayı ise false
+
+*/
+//isNaN sayı değil mi değilse true
+    //let yas,dogum_yili;
+    
+    
+    
+    /*do {
+        yas=prompt("Yaş");
+        dogum_yili=prompt("Doğum yılı");
+    } while (isNaN(dogum_yili)||isNaN(yas));*/
+    //en az bir tanesi sayı değilse true döner.
+    //true olduğu sürece döngü devam eder.
+    
+    /*yas=prompt("Yaş ");
+    dogum_yili=prompt("Doğum yılı ");
+    while (isNaN(yas)||isNaN(dogum_yili)) {
+        yas=prompt("Yaş ");
+        dogum_yili=prompt("Doğum yılı ");
+    }*/
+
+    let kontrol_sayi;
+    /*for (kontrol_sayi = 0; kontrol_sayi < 10; kontrol_sayi++) {
+        if (kontrol_sayi==5) {
+            continue;
+        }
+        console.log(kontrol_sayi);
+    }*/
+    //kontrol_sayi=0;
+    
+    
+    
+    
+    /*while da continue nın yaptığını farklı şekilde yazınca çalıştı
+    while (kontrol_sayi<10) {
+        document.write(`kontrol_sayi = ${kontrol_sayi}<br>`);
+        if (kontrol_sayi==4) {
+            kontrol_sayi=5;
+            kontrol_sayi++;
+        }
+        else{
+            kontrol_sayi++;
+        }
+    }
+    */
+    
+    
+    
+    /* do-while da sorunsuz çalıştı
+    do {
+        kontrol_sayi++;
+        if (kontrol_sayi==5) {
+          continue;  
+        }
+        document.write(`kontrol_sayi = ${kontrol_sayi}<br>`);
+    } while (kontrol_sayi<10);
+    */
+
+
+    
+    /* 
+    
+    
+    let meyveler=["elma","armut","kiraz","erik","mango"];
+    let baslangic;
+    for(baslangic in meyveler){
+        document.write(meyveler[baslangic] +"<br>");
+    }
+    document.write("--------------------<br>");
+    let nesne={ad:"Ahmed",soyad:"Mehmed",yas:12};
+    for(baslangic in nesne){
+        document.write(`nesne[${baslangic}] : ${nesne[baslangic]}<br>`);
+    } 
+    
+
+    */
+
+
+
+
+    //bütün dizi içindeki tüm elemanları dolaştım
+
+    //faktoriyel dongüyle
+/*     let fakt,sayi;
+    sayi=5;
+    fakt=1;
+    let i;
+    for(i=1;i<sayi+1;i++){
+        fakt=fakt*i;
+    } //shift + alt + a  toggle block comment
+    document.write(`5! = ${fakt}<br>`); */
+
+    /*//fonksiyonla
+     let i=1;
+    let fakt=1;
+    let sayi=5;
+    function fonk(sayi) {
+        if(sayi==1)return fakt;
+        else{
+            while(i<sayi+1){
+                fakt=fakt*i;
+                if (sayi==i) {
+                    return fakt;
+                }
+                i++;
+            }
+        }
+    }
+    document.write(`5! = ${fonk(5)}<br>`); */
+
+    /*
+    //rekürsif fonksiyonla faktoriyel
+    let n;
+    n=6;
+    function fact(n) {
+        if (n==1) {
+            return 1;
+        }else{
+            return n*fact(n-1);
+        }
+    }
+    document.write(`5! sonucu = ${fact(6)}<br>`);
+    */
+
+    /*
+    //döngüyle fibonacci dizisi 
+    let dizi=[];
+    let i,adet=20,ilksayi=2,fib;
+    dizi[0]=ilksayi;
+    dizi[1]=ilksayi;
+    for(i=2;i<adet;i++){
+        dizi[i]=dizi[i-2]+dizi[i-1];
+    }
+    for (i = 0; i < 20; i++) {
+        console.log(`dizi[`+i+`] = ${dizi[i]}`);
+        
+    } */
+    let ilksayi,adet;
+    /* 
+    //fonksiyonla ve döngüyle fibonacci bir gösterim
+    function fib(ilksayi,adet) {
+       let dizi=[],i;
+       dizi[0]=dizi[1]=ilksayi;
+       for(i=2;i<adet;i++){
+           dizi[i]=dizi[i-2]+dizi[i-1];
+       }
+       return dizi;
+    }
+
+    console.log(fib(2,10)); */
+
+    
+    /*
+    //fonksiyonla ve döngüyle fibonacci diğer gösterim
+    function fib(ilksayi,adet) {
+       let dizi=[],i;
+       dizi[0]=dizi[1]=ilksayi;
+       for(i=2;i<adet;i++){
+           dizi[i]=dizi[i-2]+dizi[i-1];
+       }
+       i=0;
+       while(i<adet){
+           console.log(`dizi[`+i+`] = ${dizi[i]}`);
+           i++;
+       }
+    }
+    fib(2,15); */
+    
+    
+    
+
+
+    /*FİBONACCİ REKÜRSİF İLE YAPILACAK*/
+
+
+
+
+    //5^3 döngü ve fonksiyon ile
+    /* let carpim=1;
+    function carp(us,sayi) {
+        if (us==1) {
+            return sayi;
+        }else{
+            let i;
+            for(i=1;i<=us;i++){
+                carpim=carpim*sayi;
+            }
+            return carpim;
+        }
+    }
+    console.log(`5^3 = ${carp(3,5)}`); */
+
+    /*
+    5 . 5^0
+    5 * 5^1
+    5 * 5^2
+    */
+   /* 
+   sayi^2
+   sayi*usal(1,sayi) 
+   sayi*sayi*1
+   */
+
+
+   /* 
+   //Rekürsif fonksiyon ile üs alma
+   function usal(n,sayi) {
+       if (n==0) {
+           return 1;
+       }else if (n==1) {
+           return sayi;
+       }else{
+           return sayi*usal(n-1,sayi);
+       }
+   }
+   console.log(`usal(5,2) = ${usal(5,2)}`); */
+
+
+   /*
+   4*5
+   5+fonk(n-1,sayi);
+   */
+
+/*    
+    //rekürsif fonksiyon ile carpma
+       function carp(sayi1,sayi2) {
+       if(sayi2==1)return sayi1;
+       if(sayi1==1)return sayi2;
+       if(sayi1==0||sayi2==0)return 0;
+       return sayi1+carp(sayi1,sayi2-1);
+   }
+   console.log(`carp(6,7) = ${carp(6,7)}`); */
+
+
+   /*
+   2 
+   3 2+3   
+   4 2+3+4
+   5
+   7
+   */
+   /*
+   fonksiyon ve döngü ile sayıdan sayıya kadar(iki sayi da dahil) toplar 
+   let sayi1,sayi2;
+   function sayidan_sayiya_topla(sayi1,sayi2) {
+       let i,toplam=0;
+       for(i=sayi1;i<=sayi2;i++){
+           toplam=toplam+i;
+       }
+       return toplam;
+   }
+   console.log(`sayidan_sayiya_topla(2,6) = ${sayidan_sayiya_topla(2,6)}`); */
+    
+   
+    /* 
+    
+    //Rekürsif fonksiyon ile bir sayidan diğer sayıya kadar
+    //olan sayıları(iki sayı da dahil) toplayan kod
+    
+    function sayidan_sayiya_topla(sayi1,sayi2) {
+        if (sayi1==sayi2)return sayi1;
+        return sayi1 + sayidan_sayiya_topla(sayi1+1,sayi2);    
+    }
+    console.log(`sayidan_sayiya_topla(4,8) = ${sayidan_sayiya_topla(4,8)}`); */
+
+    /*
+    1
+    1
+    2
+    3
+    5
+    8
+    */
+    /*
+    rekürsif fibonacci fonksiyonu ve liste olarak gösterim
+    let sayi;
+    function fib(sayi) {
+        if(sayi==0)return 0;
+        if (sayi==1)return 1;
+        return fib(sayi-1)+fib(sayi-2);
+    }
+    for(sayi=0;sayi<10;sayi++){
+        console.log(`fib(${sayi}) = ${fib(sayi)}`);
+    }
+    */
+    </script>
+</body>
+</html>
