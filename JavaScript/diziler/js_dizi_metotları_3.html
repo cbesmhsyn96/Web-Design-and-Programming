@@ -169,6 +169,38 @@
     Şimdi mevsim ayları örneği
     every,some,filter ve map
     */
+   console.log("Mevsimler ve Ayları\n-------------------");
+   let mevsimler_ve_aylari=[
+       {mevsim:"Kış",ay:"Aralık"},
+       {mevsim:"Yaz",ay:"Ağustos"},
+       {mevsim:"Sonbahar",ay:"Kasım"},
+       {mevsim:"Kış",ay:"Ocak"},
+       {mevsim:"Yaz",ay:"Temmuz"},
+       {mevsim:"Kış",ay:"Şubat"},
+       {mevsim:"İlkbahar",ay:"Nisan"},
+       {mevsim:"Yaz",ay:"Haziran"}, 
+       {mevsim:"İlkbahar",ay:"Mayıs"},
+       {mevsim:"Sonbahar",ay:"Eylül"},
+       {mevsim:"İlkbahar",ay:"Mart"},
+       {mevsim:"Sonbahar",ay:"Ekim"},
+       
+   ];
+    let yazaylari=new Array(),kisaylari=new Array(),i_bahar_aylari=new Array(),s_bahar_aylari=new Array();
+    let yazaylari_index=0,kisaylari_index=0,i_bahar_aylari_index=0,s_bahar_aylari_index=0;
+    mevsimler_ve_aylari.forEach(element => {console.log(`mevsim :${element.mevsim}`);console.log(`ay :${element.ay}\n\n`);});
+    mevsimler_ve_aylari.map((element,index)=>{if(element.mevsim==="Yaz"){yazaylari[yazaylari_index++]=element.ay;}else if(element.mevsim==="Sonbahar"){s_bahar_aylari[s_bahar_aylari_index++]=element.ay;}else if(element.mevsim==="Kış"){kisaylari[kisaylari_index++]=element.ay;}else i_bahar_aylari[i_bahar_aylari_index++]=element.ay;});     
+    /* console.log("Yaz ayları\n",yazaylari.toString());
+    console.log("Kış ayları\n",kisaylari.toString());
+    console.log("İlkbahar ayları\n",i_bahar_aylari.toString());
+    console.log("Sonbahar ayları\n",s_bahar_aylari.toString()); */
+    /* console.log("Yaz ayları      ==> ",yazaylari.join(" ++ "));
+    console.log("Kış ayları      ==> ",kisaylari.join("  "));
+    console.log("İlkbahar ayları ==> ",i_bahar_aylari.join(" -- "));
+    console.log("Sonbahar ayları ==> ",s_bahar_aylari.join(" _-_ ")); */
+    /* yazaylari.forEach((element,index) => console.log(`yazaylari[`+index+`] = ${element}`));
+    kisaylari.forEach((element,index) => console.log(`kisaylari[`+index+`] = ${element}`));
+    i_bahar_aylari.forEach((element,index) => console.log(`i_bahar_aylari[`+index+`] = ${element}`));
+    s_bahar_aylari.forEach((element,index) => console.log(`s_bahar_aylari[`+index+`] = ${element}`)); */
     </script>
     <!--
         console.clear();
